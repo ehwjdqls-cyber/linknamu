@@ -14,8 +14,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ko" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+        />
       </head>
-      <body className="min-h-screen bg-stone-50 text-stone-900 antialiased dark:bg-neutral-950 dark:text-neutral-100">
+      <body className="min-h-screen text-stone-800 antialiased dark:text-stone-100">
         {children}
       </body>
     </html>

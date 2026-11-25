@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 따뜻한 크림 → 살구 그라데이션. 은은한 빛 번짐이 있어야 글래스 카드가 살아난다 */
+body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+    "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  background-color: #fff7ed;
+  background-image:
+    radial-gradient(60rem 40rem at 15% -10%, rgba(255, 255, 255, 0.9), transparent 60%),
+    radial-gradient(50rem 36rem at 100% 100%, rgba(253, 186, 150, 0.45), transparent 60%),
+    linear-gradient(165deg, #fffaf0 0%, #ffeedb 55%, #ffd9bf 100%);
+  background-attachment: fixed;
+}
+
+.dark body {
+  background-color: #1c1512;
+  background-image:
+    radial-gradient(50rem 36rem at 10% -10%, rgba(255, 168, 120, 0.14), transparent 60%),
+    radial-gradient(50rem 36rem at 100% 100%, rgba(255, 140, 90, 0.12), transparent 60%),
+    linear-gradient(165deg, #231a15 0%, #1a1310 100%);
+}
