@@ -1,4 +1,4 @@
-import LinkCard from "@/components/LinkCard";
+import LinkList from "@/components/LinkList";
 import Profile from "@/components/Profile";
 import ThemeToggle from "@/components/ThemeToggle";
 import { links, profile } from "@/lib/links";
@@ -11,13 +11,7 @@ export default function Home() {
         {/* 상단: 원형 프로필 사진 / 이름 / 한 줄 소개 */}
         <Profile name={profile.name} bio={profile.bio} photoUrl={profile.photoUrl} />
         {/* 하단: 링크 카드 3개를 세로로 배치 */}
-        <ul className="flex w-full flex-col gap-4">
-          {links.map((link) => (
-            <li key={link.id}>
-              <LinkCard id={link.id} title={link.title} url={link.url} />
-            </li>
-          ))}
-        </ul>
+        <LinkList links={links} />
       </div>
     </main>
   );
